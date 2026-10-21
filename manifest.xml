@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
   Alerte hors horaires de travail – Atelier M3
-  Remplacer partout https://VOTRE-ADRESSE par l'adresse HTTPS
-  où sont hébergés les fichiers (ex. https://atelier-m3.github.io/alerte-hors-horaires).
+  Fichiers hébergés sur https://fdaguinm3.github.io/alerte-hors-horaires
 -->
 <OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1"
            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -14,12 +13,12 @@
   <ProviderName>Atelier M3</ProviderName>
   <DefaultLocale>fr-FR</DefaultLocale>
   <DisplayName DefaultValue="Alerte hors horaires"/>
-  <Description DefaultValue="Demande une confirmation avant l'envoi d'un mail en dehors des horaires de travail (avant 9h, après 18h et le week-end)."/>
-  <IconUrl DefaultValue="https://VOTRE-ADRESSE/assets/icon-64.png"/>
-  <HighResolutionIconUrl DefaultValue="https://VOTRE-ADRESSE/assets/icon-128.png"/>
+  <Description DefaultValue="Demande une confirmation avant l'envoi d'un mail en dehors des horaires de travail (avant 9h, après 18h du lundi au jeudi, après 17h le vendredi, et le week-end)."/>
+  <IconUrl DefaultValue="https://fdaguinm3.github.io/alerte-hors-horaires/assets/icon-64.png"/>
+  <HighResolutionIconUrl DefaultValue="https://fdaguinm3.github.io/alerte-hors-horaires/assets/icon-128.png"/>
   <SupportUrl DefaultValue="https://www.atelier-m3.fr"/>
   <AppDomains>
-    <AppDomain>https://VOTRE-ADRESSE</AppDomain>
+    <AppDomain>https://fdaguinm3.github.io</AppDomain>
   </AppDomains>
   <Hosts>
     <Host Name="Mailbox"/>
@@ -32,7 +31,7 @@
   <FormSettings>
     <Form xsi:type="ItemRead">
       <DesktopSettings>
-        <SourceLocation DefaultValue="https://VOTRE-ADRESSE/commands.html"/>
+        <SourceLocation DefaultValue="https://fdaguinm3.github.io/alerte-hors-horaires/commands.html"/>
         <RequestedHeight>250</RequestedHeight>
       </DesktopSettings>
     </Form>
@@ -74,13 +73,13 @@
       </Hosts>
       <Resources>
         <bt:Images>
-          <bt:Image id="Icon.16x16" DefaultValue="https://VOTRE-ADRESSE/assets/icon-16.png"/>
-          <bt:Image id="Icon.32x32" DefaultValue="https://VOTRE-ADRESSE/assets/icon-32.png"/>
-          <bt:Image id="Icon.80x80" DefaultValue="https://VOTRE-ADRESSE/assets/icon-80.png"/>
+          <bt:Image id="Icon.16x16" DefaultValue="https://fdaguinm3.github.io/alerte-hors-horaires/assets/icon-16.png"/>
+          <bt:Image id="Icon.32x32" DefaultValue="https://fdaguinm3.github.io/alerte-hors-horaires/assets/icon-32.png"/>
+          <bt:Image id="Icon.80x80" DefaultValue="https://fdaguinm3.github.io/alerte-hors-horaires/assets/icon-80.png"/>
         </bt:Images>
         <bt:Urls>
-          <bt:Url id="WebViewRuntime.Url" DefaultValue="https://VOTRE-ADRESSE/commands.html"/>
-          <bt:Url id="JSRuntime.Url" DefaultValue="https://VOTRE-ADRESSE/launchevent.js"/>
+          <bt:Url id="WebViewRuntime.Url" DefaultValue="https://fdaguinm3.github.io/alerte-hors-horaires/commands.html"/>
+          <bt:Url id="JSRuntime.Url" DefaultValue="https://fdaguinm3.github.io/alerte-hors-horaires/launchevent.js"/>
         </bt:Urls>
       </Resources>
     </VersionOverrides>
