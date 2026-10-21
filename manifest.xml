@@ -12,7 +12,7 @@
   <Version>1.0.0.0</Version>
   <ProviderName>Atelier M3</ProviderName>
   <DefaultLocale>fr-FR</DefaultLocale>
-  <DisplayName DefaultValue="Alerte hors horaires"/>
+  <DisplayName DefaultValue="Envoi hors horaires"/>
   <Description DefaultValue="Demande une confirmation avant l'envoi d'un mail en dehors des horaires de travail (avant 9h, après 18h du lundi au jeudi, après 17h le vendredi, et le week-end)."/>
   <IconUrl DefaultValue="https://fdaguinm3.github.io/alerte-hors-horaires/assets/icon-64.png"/>
   <HighResolutionIconUrl DefaultValue="https://fdaguinm3.github.io/alerte-hors-horaires/assets/icon-128.png"/>
