@@ -18,7 +18,7 @@
 var HORAIRES = {
   1: [9, 18], // lundi    9h-18h
   2: [9, 18], // mardi    9h-18h
-  3: [9, 12], // mercredi 9h-12h
+  3: [9, 18], // mercredi 9h-18h
   4: [9, 18], // jeudi    9h-18h
   5: [9, 17]  // vendredi 9h-17h
 };
@@ -83,9 +83,25 @@ function onMessageSendHandler(event) {
   }
 }
 
-// Association obligatoire (Outlook Windows/Mac, web, nouvel Outlook)
-if (typeof Office !== "undefined" && Office.actions) {
-  Office.actions.associate("onMessageSendHandler", onMessageSendHandler);
+// Association du gestionnaire à l'événement d'envoi.
+// Outlook Web / nouvel Outlook / Mac exigent que la bibliothèque Office
+// soit initialisée (Office.onReady) avant l'association ; Outlook classique
+// Windows accepte l'association immédiate. On fait les deux, sans erreur.
+function associerGestionnaire() {
+  try {
+    Office.actions.associate("onMessageSendHandler", onMessageSendHandler);
+  } catch (e) {
+    // Office pas encore prêt : l'association se fera dans Office.onReady.
+  }
+}
+
+if (typeof Office !== "undefined") {
+  if (typeof Office.onReady === "function") {
+    Office.onReady(function () {
+      associerGestionnaire();
+    });
+  }
+  associerGestionnaire();
 }
 
 // Pour les tests hors Outlook uniquement (ignoré par Outlook)
