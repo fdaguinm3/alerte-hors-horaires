@@ -18,7 +18,7 @@
 var HORAIRES = {
   1: [9, 18], // lundi    9h-18h
   2: [9, 18], // mardi    9h-18h
-  3: [9, 12], // mercredi 9h-12h
+  3: [9, 18], // mercredi 9h-18h
   4: [9, 18], // jeudi    9h-18h
   5: [9, 17]  // vendredi 9h-17h
 };
